@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Perkalian">
+
+    <TextView
+        android:id="@+id/titlePenjumlahan"
+        android:layout_width="269dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Text Judul"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/equal"
+        android:layout_width="79dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="144dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="="
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="50sp"
+        app:layout_constraintStart_toEndOf="@+id/addition2"
+        app:layout_constraintTop_toBottomOf="@+id/titlePenjumlahan" />
+
+    <TextView
+        android:id="@+id/operator"
+        android:layout_width="79dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="144dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="X"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="50sp"
+        app:layout_constraintStart_toEndOf="@+id/add1"
+        app:layout_constraintTop_toBottomOf="@+id/titlePenjumlahan" />
+
+    <TextView
+        android:id="@+id/add1"
+        android:layout_width="79dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="144dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="1"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlePenjumlahan" />
+
+    <TextView
+        android:id="@+id/addition2"
+        android:layout_width="79dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="144dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="2"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="50sp"
+        app:layout_constraintStart_toEndOf="@+id/operator"
+        app:layout_constraintTop_toBottomOf="@+id/titlePenjumlahan" />
+
+    <EditText
+        android:id="@+id/etAnswer"
+        android:layout_width="79dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="44dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:hint="0"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="40sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/equal" />
+
+    <Button
+        android:id="@+id/checkAnswerbtn"
+        android:layout_width="199dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="-40dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Cek Jawaban"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/etAnswer"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operator" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="Soal yg Dikerjakan: 0"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlePenjumlahan" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="334dp"
+        android:layout_height="32dp"
+        android:scaleY="4"
+        app:layout_constraintBottom_toTopOf="@+id/operator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score"
+        app:layout_constraintVertical_bias="0.372" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
